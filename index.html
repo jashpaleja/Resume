@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jash Paleja Resume</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0; /* Remove default margin to ensure full viewport coverage */
+            overflow: hidden; /* Hide any potential scrollbars */
         }
         .resume-container {
-            max-width: 100%;
-            margin:auto;
-            /* height: 100%; */
+            width: 100%;
+            height: 100vh; /* Set height to 100% of viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .pdf-frame {
             width: 100%;
-            aspect-ratio: 1.4;
-            border: 1px solid #ccc;
+            height: 100%;
+            border: none; /* Remove border to make it cleaner */
         }
     </style>
 </head>
@@ -25,8 +30,13 @@
 
 <div class="resume-container">
     <!-- PDF iframe -->
-    <iframe class="pdf-frame" src="Jash_Resume.pdf" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe class="pdf-frame" src="Jash_Resume.pdf" frameborder="0"></iframe>
 </div>
+
+<!-- Include Bootstrap JS and Popper.js (Optional) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
